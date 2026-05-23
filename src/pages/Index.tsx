@@ -173,7 +173,7 @@ const Index = () => {
                   <span className="size-2 rounded-full bg-secondary"></span>
                   <span className="size-2 rounded-full bg-primary"></span>
                 </div>
-                <p className="font-mono text-[9px] sm:text-[10px] md:text-[11px] text-muted-foreground truncate max-w-[120px] sm:max-w-none">~/mohamed.mohy/system.live</p>
+                <p className="font-mono text-[9px] sm:text-[10px] md:text-[11px] text-muted-foreground truncate max-w-[120px] sm:max-w-none">~/Abdelrahman.Atef/system.live</p>
               </div>
               
               {/* شبكة 2x2 متجاوبة - تتحول إلى 2x2 على الهاتف وتبقى كذلك */}
