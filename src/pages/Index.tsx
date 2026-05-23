@@ -29,6 +29,43 @@ const timeline = [
      { role: "MedVision AI Cancer Detection System", place: "A desktop AI-powered medical image analysis application for detecting Brain Tumors, Breast Cancer, and Skin Cancer using Deep Learning. ", date: "Juanary 2026" },
   { role: "Chat_Math", place: "A RAG Chat to solve Mathmatics questions with a simple stramlit interface using Llama 3.2 3B ", date: "May 2025" },
 ];
+const certifications = [
+  {
+    role: "AI Engineer — NTI-Huawei ETA",
+    place: "National Telecommunication Institute · 2026",
+    date: "2026",
+    tags: ["AI", "ML", "DL", "Neural Network"],
+    link: "https://drive.google.com/file/d/1Om3mfoXCWe9YNIk9DVcMDgibRfKbjOPS/view"
+  },
+  {
+    role: "Oracle Cloud GenAI Professional",
+    place: "Oracle University · 2025",
+    date: "2025",
+    tags: ["GenAI"],
+    link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=99CC5DD79EE62F4C20430618EBAC9AC429B7E460A890FFBE9DEC03C798DB5C04"
+  },
+  {
+    role: "AI Engineer — ITI",
+    place: "Information Technology Institute · 2024",
+    date: "2024",
+    tags: ["Data Analysis", "Data Science", "AI"],
+    link: "https://drive.google.com/file/d/17UcsQPo2jrGhEpSk8Kb2Wbi2LVEKexyH/view"
+  },
+  {
+    role: "Software Engineering — NRC",
+    place: "National Research Center · 2024",
+    date: "2024",
+    tags: ["SWE", "OOP", "Design Patterns"],
+    link: "https://drive.google.com/file/d/1e215_R3eVGTCUNk3zXM6ABAve8uVJY0r/view"
+  },
+  {
+    role: "Data Analysis Professional Track",
+    place: "CAPMAS · 2024",
+    date: "2024",
+    tags: ["Data Analysis", "Excel", "Power BI", "SPSS", "R programming"],
+    link: "https://drive.google.com/file/d/1YzUKV4T9FRNrjIGWE70_-bV1t-9RUrxt/view"
+  }
+];
 
 const focusAreas = [
   {
@@ -47,16 +84,9 @@ const focusAreas = [
 
 const automationFlow = ["Trigger", "Collect data", "AI classify", "Generate report", "Notify team"];
 
-const engineRoom = [
-  { icon: Cpu, title: "Think", text: "Turn messy ideas into a clear technical plan: data, model, interface, automation, and deployment path." },
-  { icon: Layers3, title: "Build", text: "Create React/Vite experiences, AI workflows, dashboards, bots, and backend-connected product prototypes." },
-  { icon: Send, title: "Ship", text: "Polish the product, test the flow, make it fast on mobile, and prepare it for real people to use." },
-];
 
-const stackRows = [
-  ["Python", "FastAPI", "LangChain", "RAG", "TensorFlow"],
-  ["n8n", "APIs", "Reports", "Power BI", "Automation"],
-];
+
+
 
 const Index = () => {
   return (
@@ -115,17 +145,21 @@ const Index = () => {
             </div>
             
             {/* أزرار متجاوبة */}
-            <div className="flex flex-col sm:flex-row gap-3 animate-fade-in [animation-delay:220ms] justify-center">
-              <Button asChild variant="hero" size="lg" className="w-full sm:w-auto">
-                <a href="#projects">View projects <ArrowUpRight className="ml-2 size-4" /></a>
-              </Button>
-              <Button asChild variant="circuit" size="lg" className="w-full sm:w-auto">
-                <a href="mailto:mohmmadmohy52@gmail.com">Hire me <Mail className="ml-2 size-4" /></a>
-              </Button>
-              <Button asChild variant="circuit" size="lg" className="w-full sm:w-auto">
-                <a href="/AbdelrahmanAtef.pdf" target="_blank" rel="noreferrer">Open CV <Sparkles className="ml-2 size-4" /></a>
-              </Button>
-            </div>
+         {/* أزرار متجاوبة */}
+<div className="flex flex-col sm:flex-row gap-3 animate-fade-in [animation-delay:220ms] justify-center relative z-30">
+  <Button asChild variant="hero" size="lg" className="w-full sm:w-auto cursor-pointer">
+    <a href="#projects" onClick={(e) => {
+      e.preventDefault();
+      document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+    }}>View projects <ArrowUpRight className="ml-2 size-4" /></a>
+  </Button>
+  <Button asChild variant="circuit" size="lg" className="w-full sm:w-auto cursor-pointer">
+    <a href="mailto:abdoatefe2002@gmail.com">Hire me <Mail className="ml-2 size-4" /></a>
+  </Button>
+  <Button asChild variant="circuit" size="lg" className="w-full sm:w-auto cursor-pointer">
+    <a href="/AbdelrahmanAtefA.pdf" target="_blank" rel="noreferrer">Open CV <Sparkles className="ml-2 size-4" /></a>
+  </Button>
+</div>
           </div>
 
           {/* Right Column: Code Window - يظهر تحت النصوص على الهاتف */}
@@ -198,6 +232,75 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+<section id="certificates" className="relative px-4 sm:px-6 md:px-8 lg:px-10 py-12 sm:py-16 md:py-20">
+  <div className="mx-auto grid max-w-7xl gap-8 sm:gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+    <div className="text-center lg:text-left">
+      <p className="mb-2 text-sm font-bold uppercase text-secondary">Credentials</p>
+    </div>
+    <div className="space-y-6 sm:space-y-8">
+      <div className="space-y-2.5 sm:space-y-3">
+        <h3 className="font-display text-3xl sm:text-4xl md:text-5xl font-black">Certifications</h3>
+
+        {certifications.map((cert) => (
+          <a
+            key={cert.role + cert.place}
+            href={cert.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block hover-lift transition-all duration-300"
+          >
+            <div className="grid gap-1.5 sm:gap-2 border-l-2 border-line bg-surface/45 p-4 sm:p-5 sm:grid-cols-[1fr_auto] hover:border-secondary hover:bg-surface/70">
+              <div>
+                <h3 className="font-bold text-foreground text-sm sm:text-base flex items-center gap-2">
+                  {cert.role}
+                  <span className="material-symbols-outlined text-xs text-secondary">verified</span>
+                </h3>
+                <p className="text-xs sm:text-sm text-muted-foreground">{cert.place}</p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {cert.tags.map((tag) => (
+                    <span key={tag} className="text-[10px] px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-mono">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <p className="text-xs sm:text-sm text-secondary font-mono whitespace-nowrap">{cert.date}</p>
+            </div>
+          </a>
+        ))}
+
+        {/* Education Section (Optional - included from your original) */}
+        <div className="mt-6 pt-4 border-t border-line">
+          <div className="grid gap-1.5 sm:gap-2 border-l-2 border-line bg-surface/45 p-4 sm:p-5">
+            <div>
+              <h3 className="font-bold text-foreground text-sm sm:text-base">
+                B.Sc. Computer Science & Statistics
+              </h3>
+              <p className="text-xs sm:text-sm text-secondary font-medium">
+                Helwan University · GPA: 3.608 (B+)
+              </p>
+              <p className="text-xs text-muted-foreground mt-1">
+                ML, Deep Learning, Neural Networks, Computer Vision, NLP, Statistics, Linear Algebra, Pattern Recognition.
+              </p>
+              <div className="mt-2">
+                <a
+                  href="https://drive.google.com/file/d/1TAi6tMJ0pBHfHTZsg7LtErmDiBBB95S1/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-xs font-mono text-secondary hover:underline"
+                >
+                  Show Certificate →
+                </a>
+              </div>
+            </div>
+            <p className="text-xs sm:text-sm text-secondary font-mono">Sep 2021 – Jul 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Projects Section */}
       <section id="projects" className="relative border-y border-border/60 bg-background/78 px-4 sm:px-6 md:px-8 lg:px-10 py-12 sm:py-16 md:py-20 backdrop-blur">

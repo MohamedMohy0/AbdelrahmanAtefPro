@@ -103,6 +103,11 @@ All colors MUST be HSL.
   }
 }
 
+/* Add to your global CSS if needed */
+button, a, [role="button"] {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
 @layer base {
   * {
     @apply border-border;
